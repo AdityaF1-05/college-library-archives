@@ -5,9 +5,10 @@
 
 int main() {
 
-    LibraryManager* lm;
+    LibraryManager lm;
+    LibraryData ld;
     
-    lm->SwitchMenu();
+    lm.SwitchMenu();
 
     return 0;
 }

@@ -2,6 +2,7 @@
 #include <string>
 #include "../header/library-header.hpp"
 
+
 void LibraryManager::MainMenu() {
     std::cout << std::endl;
     std::cout << "+==================+\n";
@@ -33,7 +34,7 @@ void LibraryManager::SwitchMenu() {
             int theValue = std::stoi(theSwitch);
             switch (theValue) {
                 case 1: {
-                    SubMenu();
+                    SubSwitchMenu();
                     break;
                 }
 

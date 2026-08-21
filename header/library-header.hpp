@@ -67,6 +67,22 @@ class Journal : public Library {
     int getCode() {
         return code;
     }
+
+    void setYear(int newYear) {
+        if (newYear < 2020) {
+            year = 2020;
+        } else {
+            year = newYear;
+        }
+    }
+
+    void setCode(int newCode) {
+        if (newCode == 0) {
+            code = 1;
+        } else {
+            code = newCode;
+        }
+    }
 };
 
 class LibraryData {
@@ -74,18 +90,25 @@ class LibraryData {
     std::vector <Library*> libraryArchives;
 
     public:
-    ~LibraryData() {
-        CleanData();
-    }
-    void CleanData();
+    LibraryData();
+    ~LibraryData();
+
+    void addBooks(std::string type, std::string writer, std::string bookName, int Page, int year);
+    void addJournal(std::string type, std::string writer, std::string title, int year, int code);
 };
 
 class LibraryManager {
+    private:
+    LibraryData dl;
+
     public:
+    LibraryManager();
+
     void MainMenu();
     void SwitchMenu();
 
     void SubMenu();
+    void SubSwitchMenu();
 };
 
 #endif
