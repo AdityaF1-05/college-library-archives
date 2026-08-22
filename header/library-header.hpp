@@ -21,6 +21,10 @@ class Library {
     std::string getWriter() {
         return writer;
     }
+
+    virtual void LibraryDetails() {
+        std::cout << "Type : " << type << " | " << "Writer : " << writer;
+    }
 };
 
 class Books : public Library {
@@ -43,6 +47,14 @@ class Books : public Library {
 
     int getYear() {
         return year;
+    }
+
+    void LibraryDetails() override {
+        std::cout << "[BOOKS]" << std::endl
+                  << "Book Type : " << type << std::endl
+                  << "Writer : " << writer << std::endl
+                  << "Book Pages : " << bookPage << std::endl
+                  << "Year Release : " << year << std::endl;
     }
 };
 
@@ -83,6 +95,15 @@ class Journal : public Library {
             code = newCode;
         }
     }
+
+    void LibraryDetails() override {
+        std::cout << "[JOURNAL]" << std::endl
+                  << "Journal Type : " << type << std::endl
+                  << "Writer : " << writer << std::endl
+                  << "Title : " << JournalTitle << std::endl
+                  << "Year : " << year << std::endl
+                  << "Code : " << "A-" << code << std::endl; 
+    }
 };
 
 class LibraryData {
@@ -109,6 +130,9 @@ class LibraryManager {
 
     void SubMenu();
     void SubSwitchMenu();
+
+    void SubMenuJournal();
+    void JournalSwitch();
 };
 
 #endif

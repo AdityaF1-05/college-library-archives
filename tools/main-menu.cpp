@@ -10,6 +10,7 @@ void LibraryManager::MainMenu() {
     std::cout << "+==================+\n";
     std::cout << std::endl;
 
+    std::cout << "Main Menu\n";
     std::cout << "1. Books" << std::endl;
     std::cout << "2. Journal" << std::endl;
     std::cout << "3. Info" << std::endl;
@@ -39,8 +40,7 @@ void LibraryManager::SwitchMenu() {
                 }
 
                 case 2: {
-                    std::cout << "\nDevelopment In Progress! Coming Soon.";
-                    std::cout << std::endl;
+                    SubMenuJournal();
                     break;
                 }
 

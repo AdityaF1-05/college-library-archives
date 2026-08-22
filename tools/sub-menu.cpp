@@ -11,6 +11,7 @@ void LibraryManager::SubMenu() {
     std::cout << "+===========+\n";
     std::cout << std::endl;
 
+    std::cout << "Sub-Menu (Book)\n";
     std::cout << "1. Add Books to Catalogue\n";
     std::cout << "2. To Main Menu\n\n";
 }
@@ -119,8 +120,6 @@ void LibraryManager::SubSwitchMenu() {
                     }
 
                     dl.addBooks(myType, myWriter, myBookName, PageBook, Year);
-                    std::cout << "\n [SUCCESS] " << myType << ", Title : " << myBookName << " Has been Stored to Catalogue!";
-                    std::cout << std::endl;
                     break;
                 }
 
