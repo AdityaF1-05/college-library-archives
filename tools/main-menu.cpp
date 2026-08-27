@@ -40,7 +40,7 @@ void LibraryManager::SwitchMenu() {
                 }
 
                 case 2: {
-                    SubMenuJournal();
+                    JournalSwitch();
                     break;
                 }
 
